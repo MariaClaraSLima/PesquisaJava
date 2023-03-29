@@ -220,5 +220,55 @@ switch {
 ```
 
 <h2> Estruturas de Looping </h2>
+Estruturas de repetição são utilizadas para repetição de partes de programas. 
+
+For 
+For (para) é uma declaração de fluxo de controle que repete parte do programa diversas vezes. Entre as estruturas o “For” é a mais utilizada. Quando o número de  repetição é fixo se recomenda sua utilização
+O for possui três formas: 
+
+For simples: inicia a variável, checa sua condição, incrementa ou decrementa o valor. Sintaxe: 
+
+for(inicialização da variável; condição; alteração da variável) {  
+       [comando]
+}
+ 
+For-each: conta os loops que serão usados durante a operação, você declara o tipo da variável seguido do nome do array utilizado durante a execução da aplicação. (A quantidade do array será a quantidade do loop). Sintaxe: 
+
+for (tipo da variável: array) 
+{ 
+    comandos usando a variável;
+}
+
+For marcado: reserva um nome para ser usado para cada um dos loops do programa. Facilita sua utilização várias vezes sem a necessidade de reescrevê-lo. Sintaxe: 
+nomedoLoop:  
+for(inicialização; condição; alteração da variável) {  
+//comando
+}
+
+While
+While (enquanto) é uma declaração de fluxo de controle que executa parte do programa repetitivamente dependendo da condição dada a ela (repete até a condição ser falsa). Quando o número de repetição não for fixo se recomenda sua utilização
+Sintaxe: 
+while (condição) {
+// código a ser executado
+}
+
+
+
+Do while 
+Do while (faça enquanto) é uma declaração de fluxo de controle que executa parte do programa pelo menos uma vez, e passa a executar repetitivamente dependendo da condição dada a ela (se a condição for falsa na sua primeira, não será repetido) . 
+Quando o número de repetição não for fixo, mas precisa ser repetido pelo menos uma vez,  se recomenda sua utilização. 
+Sintaxe: 
+do{
+// código a ser executado
+} while (condição);
+
+
+Referencias 
+https://www.javatpoint.com/pt/loops-em-java
+https://blog.betrybe.com/for-java/#1
+https://www.treinaweb.com.br/blog/estruturas-condicionais-e-estruturas-de-repeticao-em-java
+https://www.jdevtreinamento.com.br/estruturas-de-repeticao-em-java/
+https://productoversee.com/java-estruturas-de-repeticao/
+http://excript.com/java/estrutura-repeticao-for-java.html 
 
 
