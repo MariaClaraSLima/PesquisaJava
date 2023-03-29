@@ -48,3 +48,175 @@ https://www.javatpoint.com/pt/tipo-de-dado-em-java#:~:text=Existem%20dois%20tipo
 <h2> Estruras de Condicional </h2>
 
 <h2> Estruturas de Looping </h2>
+
+A linguagem de programação Java, se assemelha ao C# em diversos aspectos, tendo poucas diferenças de sintaxe.
+Adendo: as estruturas de condicionais ficam dentro da classe main. 
+Ex:
+```
+public static void main(String[] args) {
+	estruturas de condicionais
+}
+```
+
+### Condional Simples
+
+**Sintaxe:**
+
+```
+[tipo de dado] [nome das variáveis];
+
+if (condição) {
+	instruções;
+}
+```
+
+**Exemplo:**
+
+```
+float media, nota1, nota2;
+
+media = (nota1 + nota2) / 2
+
+  if (media >= 7) {
+		System.out.println(“Você foi aprovado com média de: ” + media);
+}
+```
+
+### Condicional Composta
+
+**Sintaxe:** 
+
+```
+[tipo de dado] [nome das variáveis];
+
+if (condição) {
+	instruções;
+}
+else{
+	instruções;
+}
+```
+
+**Exemplo:** 
+
+```
+float media, nota1, nota2;
+
+media = (nota1 + nota2) / 2
+
+	if (media>=7) {
+		System.out.println(“Você foi aprovado com média de: “ + media);
+   }
+	else{
+		System.out.println(“Você foi reprovado com média de: “ + media);
+  }
+```
+
+### Condicional Encadeada
+
+**Sintaxe:** 
+
+```
+[tipo de dado] [nome das variáveis];
+
+if (condição) {
+  instruções;
+}
+else if (condição) {
+  instruções;
+}
+else{
+  instruções;
+}
+```
+
+**Exemplo:**
+
+```
+float media, nota1, nota2;
+
+media = (nota1 + nota2) / 2
+
+	if (media >= 7) {
+		System.out.println(“Você foi aprovado com média: “ + media);
+	}
+	else if (media >= 4 && <6){
+		System.out.println(“Você está de recuperação!”);
+	}
+	else {
+		System.out.println(“Você foi reprovado com média: “ + media);
+	}
+ ```
+ 
+ ### Condicional Witch/Case
+ 
+<p>É uma alternativa para quando se possui múltiplos if ou else de forma encadeada.</p>
+<p>O switch/case verifica o valor contido em uma variável, realizando comparações com cada instrução. Cada instrução é determinada por case.</p>
+<p>Caso aconteça da variável não corresponder com nenhum dos casos, se executa o último bloco, nomeado de default.</p>
+
+ 
+ **Sintaxe:**
+ 
+ ```
+switch (expressão) {
+	
+  case valor1: 
+	  instruções;
+	  break;
+
+  case valor2: 
+	  instruções;
+	  break;
+
+  case valorN: 
+	  instruções;
+	  break;
+
+  default: 
+    instruções;
+    break; 
+}
+ ```
+ 
+ **Exemplo:**
+ 
+ ```
+int dia;
+
+dia = 7;
+
+switch {
+	
+	case 1:
+		System.out.println(“Hoje é Domingo!”);
+		break;
+
+	case 2:
+		System.out.println(“Hoje é Segunda-Feira!”);
+		break;
+
+	case 3:
+		System.out.println(“Hoje é Terça-Feira!”);
+		break;
+
+	case 4:
+		System.out.println(“Hoje é Quarta-Feira!”);
+		break;
+
+	case 5:
+		System.out.println(“Hoje é Quinta-Feira!”);
+		break;
+
+	case 6:
+		System.out.println(“Hoje é Sexta-Feira!”);
+		break;
+
+	case 7:
+		System.out.println(“Hoje é Sábado!”);
+		break;
+
+	default:
+		System.out.println(“Dia inválido”);
+		break;
+}
+```
