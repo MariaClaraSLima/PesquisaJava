@@ -47,8 +47,6 @@ https://www.javatpoint.com/pt/tipo-de-dado-em-java#:~:text=Existem%20dois%20tipo
 
 <h2> Estruras de Condicional </h2>
 
-<h2> Estruturas de Looping </h2>
-
 A linguagem de programação Java, se assemelha ao C# em diversos aspectos, tendo poucas diferenças de sintaxe.
 Adendo: as estruturas de condicionais ficam dentro da classe main. 
 Ex:
@@ -220,3 +218,7 @@ switch {
 		break;
 }
 ```
+
+<h2> Estruturas de Looping </h2>
+
+
