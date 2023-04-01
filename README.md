@@ -16,7 +16,8 @@ Como toda linguagem de programação existem diversos tipos de estruturas. Dentr
  * <a href="#t1"> Tipos de Dados </a>
  * <a href="#t2"> Estruturas Condionais </a>
  * <a href="#t3"> Estruturas de Looping </a>
- * <a href="t4"> Referências </a>
+ * <a href="#t4"> Elementos (Views) </a>
+ * <a href="t5"> Referências </a>
 
 <h2 id="t1"> Tipos de dados </h2>
 
@@ -319,8 +320,16 @@ do{
 } while (condição);
 ```
 
+<h2 id="t4"> Elementos (Views) </h2>
 
-<h2 id="t4"> Referências </h2>
+### Buttons
+
+### Text
+
+### Widgets
+
+
+<h2 id="t5"> Referências </h2>
 
 https://www.javatpoint.com/pt/loops-em-java
 https://blog.betrybe.com/for-java/#1
