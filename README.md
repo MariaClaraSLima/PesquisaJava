@@ -323,8 +323,9 @@ do{
 <h2 id="t4"> Elementos (Views) </h2>
 
 ### Buttons
-Buttons 
-RadioGroup: Este elemento é uma classe utilizada para desmarcar qualquer outro botão que esteja dentro do grupo (RadioButtons), ou seja, ao marcar este botão o restante é desmarcado e apesar alguns de opção específica não possam ser desmarcados, podem ser limpos para remover a marcação, garantindo assim que apenas uma opção será marcada. 
+
+###RadioGroup: Este elemento é uma classe utilizada para desmarcar qualquer outro botão que esteja dentro do grupo (RadioButtons), ou seja, ao marcar este botão o restante é desmarcado e apesar alguns de opção específica não possam ser desmarcados, podem ser limpos para remover a marcação, garantindo assim que apenas uma opção será marcada. 
+
 Sintaxe: 
 <RadioGroup xmlns:android="Url de referência a objeto"
 
@@ -332,8 +333,7 @@ Sintaxe:
 
 </RadioGroup>
 
-RadioButton: Este elemento é um botão de rádio que pode ter dois estados, marcado ou desmarcado, porém o usuário não pode desmarcá - lo uma vez que marcou, por isso é utilizado dentro da classe RadioGroup. 
-
+###RadioButton: Este elemento é um botão de rádio que pode ter dois estados, marcado ou desmarcado, porém o usuário não pode desmarcá - lo uma vez que marcou, por isso é utilizado dentro da classe RadioGroup. 
 
 Sintaxe: 
 <RadioGroup xmlns:android="Url de referência a objeto"
@@ -351,7 +351,8 @@ Sintaxe:
 
  </RadioGroup>
           
-ToggleButton: Este elemento exibe dois estados, marcado ou desmarcado, com o botão com um indicador colorido e acompanhado com o texto on ou off  
+###ToggleButton: Este elemento exibe dois estados, marcado ou desmarcado, com o botão com um indicador colorido e acompanhado com o texto on ou off
+
 Sintaxe: 
 <TextView
         android:id="@+id/toggle_button_label"
@@ -363,7 +364,7 @@ Sintaxe:
         app:layout_constraintBaseline_toBaselineOf="@id/toggle"
         android:text="@string/toggle_button" />
 
- Switch: Este elemento é um botão de alternância de dois estados (tendo sua versão mais antiga o SwitchCompat). O usuário pode arrastar o botão "polegar" para frente e para trás para selecionar uma das duas opções ou simplesmente tocar no botão para alternar entre as opções. 
+###Switch: Este elemento é um botão de alternância de dois estados (tendo sua versão mais antiga o SwitchCompat). O usuário pode arrastar o botão "polegar" para frente e para trás para selecionar uma das duas opções ou simplesmente tocar no botão para alternar entre as opções. 
 Sintaxe: 
 fun SwitchComposable(modifier: Modifier = Modifier) {
     Switch(
@@ -382,7 +383,7 @@ fun SwitchComposable(modifier: Modifier = Modifier) {
 
 
 
- FloatingActionButton: Este elemento é um botão de ação flutuante, é utilizado para um tipo especial de ação promovida. Eles são distinguidos por um ícone circular flutuando acima da interface do usuário e possuem comportamentos de movimento especiais relacionados a metamorfose, lançamento e ponto de ancoragem de transferência.
+###FloatingActionButton: Este elemento é um botão de ação flutuante, é utilizado para um tipo especial de ação promovida. Eles são distinguidos por um ícone circular flutuando acima da interface do usuário e possuem comportamentos de movimento especiais relacionados a metamorfose, lançamento e ponto de ancoragem de transferência.
 
 Sintaxe: 
 <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -397,7 +398,7 @@ Sintaxe:
 
 ### Text
 
-MultiAutoCompleteTextView: Este elemento é uma exibição de texto editável, que pode mostrar sugestões de conclusão para a substring do texto em que o usuário está digitando, em vez de necessariamente para a coisa toda.
+###MultiAutoCompleteTextView: Este elemento é uma exibição de texto editável, que pode mostrar sugestões de conclusão para a substring do texto em que o usuário está digitando, em vez de necessariamente para a coisa toda.
 Sintaxe: 
 public class CountriesActivity extends Activity {
      protected void onCreate(Bundle savedInstanceState) {
@@ -417,7 +418,7 @@ public class CountriesActivity extends Activity {
  }
 
 
-CheckedTextView: Este elemento é uma extensão para TextView (elemento que mostra o texto para o usuário) que suporta o Checkable (Define uma extensão para visualizações que as tornam verificáveis)  interface e aos monitores.
+###CheckedTextView: Este elemento é uma extensão para TextView (elemento que mostra o texto para o usuário) que suporta o Checkable (Define uma extensão para visualizações que as tornam verificáveis)  interface e aos monitores.
 Sintaxe: 
 <CheckedTextView
 android:id="@+id/simpleCheckedTextView"
@@ -429,7 +430,7 @@ android:checkMark="@drawable/checked"
 android:text="Checked Text View" />
 
 
-TextInputLayout: Este elemento mostra um rótulo flutuante quando a dica está oculta enquanto o usuário insere o texto.
+###TextInputLayout: Este elemento mostra um rótulo flutuante quando a dica está oculta enquanto o usuário insere o texto.
 Sintaxe: 
 <com.google.android.material.textfield.TextInputLayout
          android:layout_width="match_parent"
@@ -440,7 +441,7 @@ Sintaxe:
 
 ### Widgets
 
-SeekBar: Este elemento é uma extensão da ProgressBar que adiciona um polegar (“linha”) arrastável para que o usuário possa levá-la para direita ou esquerda para definir o progresso atual. 
+###SeekBar: Este elemento é uma extensão da ProgressBar que adiciona um polegar (“linha”) arrastável para que o usuário possa levá-la para direita ou esquerda para definir o progresso atual. 
 Sintaxe: 
  <SeekBar
         android:id="@+id/seekbar"
@@ -449,7 +450,7 @@ Sintaxe:
         android:layout_height="wrap_content"
         android:max="150"/>
  
-SeekBar (Discrete): O SeekBar Discrete realiza a mesma função do SeekBar porém para números discretos.
+###SeekBar (Discrete): O SeekBar Discrete realiza a mesma função do SeekBar porém para números discretos.
 
 Sintaxe: 
 <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
@@ -465,7 +466,7 @@ Sintaxe:
         app:dsb_trackColor="@color/purple_200" />
 
 
-RatingBar:Este elemento é uma extensão do ProgressBar e SeekBar que mostra a classificação em estrelas. 
+###RatingBar:Este elemento é uma extensão do ProgressBar e SeekBar que mostra a classificação em estrelas. 
  
 Sintaxe: 
  <RatingBar
@@ -477,7 +478,7 @@ Sintaxe:
             android:secondaryProgressTint="#FFEB3B"
             android:stepSize="0.1"/>
 
-SearchView: Este elemento é utilizado para mostrar para o usuário uma um local para inserir uma pesquisa e enviar uma solicitação a um provedor de pesquisa, mostrando uma lista de sugestões ou resultados de consulta disponíveis para o usuário escolher uma opção. 
+###SearchView: Este elemento é utilizado para mostrar para o usuário uma um local para inserir uma pesquisa e enviar uma solicitação a um provedor de pesquisa, mostrando uma lista de sugestões ou resultados de consulta disponíveis para o usuário escolher uma opção. 
 Sintaxe:  
 <?xml version="1.0" encoding="utf-8"?>
     <menu xmlns:android="http://schemas.android.com/apk/res/android">
@@ -488,7 +489,7 @@ Sintaxe:
               android:actionViewClass="android.widget.SearchView" />
     </menu>
    
-TextureView: Este elemento é utilizado para exibir um fluxo de conteúdo, como o proveniente de uma visualização de câmera, um vídeo ou uma cena OpenGL. O fluxo de conteúdo pode vir do processo do aplicativo, bem como de um processo remoto.
+###TextureView: Este elemento é utilizado para exibir um fluxo de conteúdo, como o proveniente de uma visualização de câmera, um vídeo ou uma cena OpenGL. O fluxo de conteúdo pode vir do processo do aplicativo, bem como de um processo remoto.
 Sintaxe:  
 public class MyActivity extends Activity implements TextureView.SurfaceTextureListener {
       private MediaPlayer mMediaPlayer;
@@ -504,7 +505,7 @@ public class MyActivity extends Activity implements TextureView.SurfaceTextureLi
           setContentView(mTextureView);
       }
 
-SurfaceView: Este elemento fornece uma superfície de desenho dedicada incorporada dentro de uma hierarquia de exibição. Você pode controlar o formato desta superfície e, se quiser, seu tamanho; o SurfaceView cuida de colocar a superfície no local correto na tela.
+###SurfaceView: Este elemento fornece uma superfície de desenho dedicada incorporada dentro de uma hierarquia de exibição. Você pode controlar o formato desta superfície e, se quiser, seu tamanho; o SurfaceView cuida de colocar a superfície no local correto na tela.
 Sintaxe: 
 SurfaceView(
     context: Context!,
@@ -512,7 +513,7 @@ SurfaceView(
     defStyleAttr: Int,
     defStyleRes: Int)
 
-Horizontal Divider: Este elemento que cria uma linha horizontal dividindo os elementos 
+###Horizontal Divider: Este elemento que cria uma linha horizontal dividindo os elementos 
 Sintaxe: 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
    android:layout_width="match_parent"
@@ -524,7 +525,7 @@ Sintaxe:
  </LinearLayout>
 
 
-Vertical Dividir: Este elemento que cria uma linha vertical dividinho os elementos
+###Vertical Dividir: Este elemento que cria uma linha vertical dividinho os elementos
 Sintaxe:
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
    android:layout_width="match_parent"
