@@ -324,18 +324,21 @@ do{
 
 ### Buttons
 
-###RadioGroup: Este elemento é uma classe utilizada para desmarcar qualquer outro botão que esteja dentro do grupo (RadioButtons), ou seja, ao marcar este botão o restante é desmarcado e apesar alguns de opção específica não possam ser desmarcados, podem ser limpos para remover a marcação, garantindo assim que apenas uma opção será marcada. 
+**RadioGroup:** Este elemento é uma classe utilizada para desmarcar qualquer outro botão que esteja dentro do grupo (RadioButtons), ou seja, ao marcar este botão o restante é desmarcado e apesar alguns de opção específica não possam ser desmarcados, podem ser limpos para remover a marcação, garantindo assim que apenas uma opção será marcada. 
 
 Sintaxe: 
+´´´
 <RadioGroup xmlns:android="Url de referência a objeto"
 
        Botões da classe
 
 </RadioGroup>
+´´´
 
-###RadioButton: Este elemento é um botão de rádio que pode ter dois estados, marcado ou desmarcado, porém o usuário não pode desmarcá - lo uma vez que marcou, por isso é utilizado dentro da classe RadioGroup. 
+**RadioButton:** Este elemento é um botão de rádio que pode ter dois estados, marcado ou desmarcado, porém o usuário não pode desmarcá - lo uma vez que marcou, por isso é utilizado dentro da classe RadioGroup. 
 
 Sintaxe: 
+´´´
 <RadioGroup xmlns:android="Url de referência a objeto"
        <RadioButton android:id="@+id/radio_pirates"
                   android:layout_width="wrap_content"
@@ -350,10 +353,11 @@ Sintaxe:
                   android:onClick="onRadioButtonClicked"/>
 
  </RadioGroup>
-          
-###ToggleButton: Este elemento exibe dois estados, marcado ou desmarcado, com o botão com um indicador colorido e acompanhado com o texto on ou off
+ ´´´
+**ToggleButton:** Este elemento exibe dois estados, marcado ou desmarcado, com o botão com um indicador colorido e acompanhado com o texto on ou off
 
-Sintaxe: 
+Sintaxe:
+´´´
 <TextView
         android:id="@+id/toggle_button_label"
         android:layout_width="wrap_content"
@@ -363,9 +367,11 @@ Sintaxe:
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintBaseline_toBaselineOf="@id/toggle"
         android:text="@string/toggle_button" />
+´´´
+**Switch:**  Este elemento é um botão de alternância de dois estados (tendo sua versão mais antiga o SwitchCompat). O usuário pode arrastar o botão "polegar" para frente e para trás para selecionar uma das duas opções ou simplesmente tocar no botão para alternar entre as opções. 
 
-###Switch: Este elemento é um botão de alternância de dois estados (tendo sua versão mais antiga o SwitchCompat). O usuário pode arrastar o botão "polegar" para frente e para trás para selecionar uma das duas opções ou simplesmente tocar no botão para alternar entre as opções. 
-Sintaxe: 
+*Sintaxe:* 
+´´´
 fun SwitchComposable(modifier: Modifier = Modifier) {
     Switch(
         checked = false,
@@ -379,13 +385,14 @@ fun SwitchComposable(modifier: Modifier = Modifier) {
         }
     )
 } 
-
+´´´
 
 
 
 ###FloatingActionButton: Este elemento é um botão de ação flutuante, é utilizado para um tipo especial de ação promovida. Eles são distinguidos por um ícone circular flutuando acima da interface do usuário e possuem comportamentos de movimento especiais relacionados a metamorfose, lançamento e ponto de ancoragem de transferência.
 
-Sintaxe: 
+*Sintaxe:*
+´´´
 <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
@@ -394,12 +401,14 @@ Sintaxe:
         android:src="@drawable/ic_my_icon"
         android:contentDescription="@string/submit"
         android:layout_margin="16dp" />
-
+´´´
 
 ### Text
 
-###MultiAutoCompleteTextView: Este elemento é uma exibição de texto editável, que pode mostrar sugestões de conclusão para a substring do texto em que o usuário está digitando, em vez de necessariamente para a coisa toda.
-Sintaxe: 
+**MultiAutoCompleteTextView:** Este elemento é uma exibição de texto editável, que pode mostrar sugestões de conclusão para a substring do texto em que o usuário está digitando, em vez de necessariamente para a coisa toda.
+
+*Sintaxe:*
+´´´
 public class CountriesActivity extends Activity {
      protected void onCreate(Bundle savedInstanceState) {
          super.onCreate(savedInstanceState);
@@ -416,10 +425,12 @@ public class CountriesActivity extends Activity {
          "Belgium", "France", "Italy", "Germany", "Spain"
      };
  }
+´´´
 
+**CheckedTextView:** Este elemento é uma extensão para TextView (elemento que mostra o texto para o usuário) que suporta o Checkable (Define uma extensão para visualizações que as tornam verificáveis)  interface e aos monitores.
 
-###CheckedTextView: Este elemento é uma extensão para TextView (elemento que mostra o texto para o usuário) que suporta o Checkable (Define uma extensão para visualizações que as tornam verificáveis)  interface e aos monitores.
-Sintaxe: 
+*Sintaxe:*
+´´´
 <CheckedTextView
 android:id="@+id/simpleCheckedTextView"
 android:layout_width="fill_parent"
@@ -428,31 +439,37 @@ android:checked="true"
 android:gravity="center"
 android:checkMark="@drawable/checked"
 android:text="Checked Text View" />
+´´´
 
+**TextInputLayout:** Este elemento mostra um rótulo flutuante quando a dica está oculta enquanto o usuário insere o texto.
 
-###TextInputLayout: Este elemento mostra um rótulo flutuante quando a dica está oculta enquanto o usuário insere o texto.
-Sintaxe: 
+*Sintaxe:*
+´´´
 <com.google.android.material.textfield.TextInputLayout
          android:layout_width="match_parent"
          android:layout_height="wrap_content"
          android:hint="@string/form_username">
-
+´´´
 
 
 ### Widgets
 
-###SeekBar: Este elemento é uma extensão da ProgressBar que adiciona um polegar (“linha”) arrastável para que o usuário possa levá-la para direita ou esquerda para definir o progresso atual. 
-Sintaxe: 
+**SeekBar:** Este elemento é uma extensão da ProgressBar que adiciona um polegar (“linha”) arrastável para que o usuário possa levá-la para direita ou esquerda para definir o progresso atual. 
+
+*Sintaxe:*
+´´´
  <SeekBar
         android:id="@+id/seekbar"
         android:layout_marginTop="400dp"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:max="150"/>
+´´´
  
-###SeekBar (Discrete): O SeekBar Discrete realiza a mesma função do SeekBar porém para números discretos.
+**SeekBar (Discrete):** O SeekBar Discrete realiza a mesma função do SeekBar porém para números discretos.
 
-Sintaxe: 
+*Sintaxe:* 
+´´´
 <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
         android:id="@+id/seekBar"
         android:layout_width="match_parent"
@@ -464,11 +481,12 @@ Sintaxe:
         app:dsb_progressColor="@color/purple_200"
         app:dsb_rippleColor="@color/purple_200"
         app:dsb_trackColor="@color/purple_200" />
+´´´
 
-
-###RatingBar:Este elemento é uma extensão do ProgressBar e SeekBar que mostra a classificação em estrelas. 
+**RatingBar:** Este elemento é uma extensão do ProgressBar e SeekBar que mostra a classificação em estrelas. 
  
-Sintaxe: 
+*Sintaxe:* 
+´´´
  <RatingBar
             android:id="@+id/rtb"
             android:layout_width="wrap_content"
@@ -477,9 +495,11 @@ Sintaxe:
             android:progressTint="#FFC107"
             android:secondaryProgressTint="#FFEB3B"
             android:stepSize="0.1"/>
+´´´
+**SearchView:** Este elemento é utilizado para mostrar para o usuário uma um local para inserir uma pesquisa e enviar uma solicitação a um provedor de pesquisa, mostrando uma lista de sugestões ou resultados de consulta disponíveis para o usuário escolher uma opção. 
 
-###SearchView: Este elemento é utilizado para mostrar para o usuário uma um local para inserir uma pesquisa e enviar uma solicitação a um provedor de pesquisa, mostrando uma lista de sugestões ou resultados de consulta disponíveis para o usuário escolher uma opção. 
-Sintaxe:  
+*Sintaxe:*
+´´´
 <?xml version="1.0" encoding="utf-8"?>
     <menu xmlns:android="http://schemas.android.com/apk/res/android">
         <item android:id="@+id/search"
@@ -488,9 +508,11 @@ Sintaxe:
               android:showAsAction="collapseActionView|ifRoom"
               android:actionViewClass="android.widget.SearchView" />
     </menu>
-   
-###TextureView: Este elemento é utilizado para exibir um fluxo de conteúdo, como o proveniente de uma visualização de câmera, um vídeo ou uma cena OpenGL. O fluxo de conteúdo pode vir do processo do aplicativo, bem como de um processo remoto.
-Sintaxe:  
+ ´´´
+**TextureView:** Este elemento é utilizado para exibir um fluxo de conteúdo, como o proveniente de uma visualização de câmera, um vídeo ou uma cena OpenGL. O fluxo de conteúdo pode vir do processo do aplicativo, bem como de um processo remoto.
+
+*Sintaxe:*
+´´´
 public class MyActivity extends Activity implements TextureView.SurfaceTextureListener {
       private MediaPlayer mMediaPlayer;
       private TextureView mTextureView;
@@ -504,17 +526,21 @@ public class MyActivity extends Activity implements TextureView.SurfaceTextureLi
           mTextureView.setSurfaceTextureListener(this);
           setContentView(mTextureView);
       }
+´´´
+**SurfaceView:** Este elemento fornece uma superfície de desenho dedicada incorporada dentro de uma hierarquia de exibição. Você pode controlar o formato desta superfície e, se quiser, seu tamanho; o SurfaceView cuida de colocar a superfície no local correto na tela.
 
-###SurfaceView: Este elemento fornece uma superfície de desenho dedicada incorporada dentro de uma hierarquia de exibição. Você pode controlar o formato desta superfície e, se quiser, seu tamanho; o SurfaceView cuida de colocar a superfície no local correto na tela.
-Sintaxe: 
+*Sintaxe:*
+´´´
 SurfaceView(
     context: Context!,
     attrs: AttributeSet!,
     defStyleAttr: Int,
     defStyleRes: Int)
+´´´
+**Horizontal Divider:** Este elemento que cria uma linha horizontal dividindo os elementos 
 
-###Horizontal Divider: Este elemento que cria uma linha horizontal dividindo os elementos 
-Sintaxe: 
+*Sintaxe:*
+´´´
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
    android:layout_width="match_parent"
    android:layout_height="match_parent"
@@ -523,10 +549,12 @@ Sintaxe:
    android:orientation="horizontal"
    android:gravity="center">
  </LinearLayout>
+´´´
 
+**Vertical Dividir:** Este elemento que cria uma linha vertical dividinho os elementos
 
-###Vertical Dividir: Este elemento que cria uma linha vertical dividinho os elementos
-Sintaxe:
+*Sintaxe:*
+´´´
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
    android:layout_width="match_parent"
    android:layout_height="match_parent"
@@ -535,7 +563,7 @@ Sintaxe:
    android:orientation="vertical"
    android:gravity="center">
  </LinearLayout>
-
+´´´
 <h2 id="t5"> Referências </h2>
 
 https://www.javatpoint.com/pt/loops-em-java
