@@ -60,7 +60,9 @@ Esse tipo de dado utiliza a tabela UNICODE e é utilizado para armazenar apenas 
 
 Existem várias outras classes invólucras, como se observa na imagem abaixo:
 
-<center><img src="https://user-images.githubusercontent.com/128001916/228694287-5137ebf4-3e89-430e-8639-474a26a36d6a.png"></center>
+<div align="center">
+	<img src="https://user-images.githubusercontent.com/128001916/228694287-5137ebf4-3e89-430e-8639-474a26a36d6a.png" width="500px" height="300px"/>
+</div>
 
 ### Por referência 
 
@@ -324,40 +326,126 @@ do{
 
 ### Buttons
 
-**RadioGroup:** Este elemento é uma classe utilizada para desmarcar qualquer outro botão que esteja dentro do grupo (RadioButtons), ou seja, ao marcar este botão o restante é desmarcado e apesar alguns de opção específica não possam ser desmarcados, podem ser limpos para remover a marcação, garantindo assim que apenas uma opção será marcada. 
+**Button:**
 
-Sintaxe: 
-´´´
+O *button* é um elemento no qual o usuário pode clicar para executar uma ação.
+
+*Sintaxe:*
+
+```
+<Button
+     android:id="@+id/button_id"
+     android:layout_height="wrap_content"
+     android:layout_width="wrap_content"
+     android:text="@string/self_destruct" />
+```
+**Image Button:**
+
+Possui características muito similares ao *button*, porém ao invés de exibir um texto no botão, será exibido uma imagem.
+
+*Sintaxe:*
+
+```
+<?xml version="1.0" encoding="utf-8"?>
+ <selector xmlns:android="http://schemas.android.com/apk/res/android">
+     <item android:state_pressed="true"
+           android:drawable="@drawable/button_pressed" /> <!-- pressed -->
+     <item android:state_focused="true"
+           android:drawable="@drawable/button_focused" /> <!-- focused -->
+     <item android:drawable="@drawable/button_normal" /> <!-- default -->
+ </selector>
+```
+
+**Chips:**
+
+São elementos compactados que representam entidades, atributos, ação ou texto. Este tipo de elemento é utilizado para inserir informações, filtrar conteúdo, acionar uma ação ou até mesmo filtrar conteúdo.
+
+*Atributos básicos*
+
+```
+android:checkable //Muda de acordo com a condição (true ou false)
+android:text //Coloca o texto do chip.
+app:chipIcone app:chipIconEnabled  //Coloca um ícone no chip
+app:checkedIcone app:checkedIconEnabled //Coloca ícone personalizado (depois de selecionado).
+app:closeIcone app:closeIconEnabled //Coloca um ícone personalizado no qual o usuário pode clicar para fechar. 
+```
+
+*Sintaxe:*
+```
+public Chip (Context context, 
+                AttributeSet attrs, 
+                int defStyleAttr)
+```
+
+**GroupChips:**
+
+Como o nome sugere, este elemento armazena grupos de chips, ou seja, vários chips. Por padrão esses chips serão organizados em várias linhas, porém pode-se utilizar a propriedade `app:singleLine` para colocar apenas em uma linha horizontal. Dependendo da quantidade de chips pode-se utilizar a propriedade `HorizontalScrollView`, isso fará com que habilite um scroll de rolagem horizontal.
+
+*Sintaxe:*
+```
+public ChipGroup (Context context, 
+                AttributeSet attrs, 
+                int defStyleAttr)
+```
+
+**CheckBox:**
+
+Esse elemento é um tipo de botão, porém com uma característica de poder ser marcado ou desmarcado conforme a necessidade do usuário.
+
+*Sintaxe:*
+
+```
+public CheckBox (Context context, 
+                AttributeSet attrs, 
+                int defStyleAttr, 
+                int defStyleRes)
+```
+
+**RadioGroup:**
+
+Este elemento é uma classe utilizada para desmarcar qualquer outro botão que esteja dentro do grupo (RadioButtons), ou seja, ao marcar este botão o restante é desmarcado e apesar alguns de opção específica não possam ser desmarcados, podem ser limpos para remover a marcação, garantindo assim que apenas uma opção será marcada. 
+
+*Sintaxe:*
+
+```
 <RadioGroup xmlns:android="Url de referência a objeto"
-
        Botões da classe
-
 </RadioGroup>
-´´´
+```
 
-**RadioButton:** Este elemento é um botão de rádio que pode ter dois estados, marcado ou desmarcado, porém o usuário não pode desmarcá - lo uma vez que marcou, por isso é utilizado dentro da classe RadioGroup. 
+**RadioButton:** 
 
-Sintaxe: 
-´´´
+Este elemento é um botão de rádio que pode ter dois estados, marcado ou desmarcado, porém o usuário não pode desmarcá - lo uma vez que marcou, por isso é utilizado dentro da classe RadioGroup. 
+
+<div align="center">
+	<img src="https://user-images.githubusercontent.com/128001916/230232684-176417e3-8540-458a-b32e-228b68954582.png" width="400px"/>
+</div>
+
+*Sintaxe:* 
+```
 <RadioGroup xmlns:android="Url de referência a objeto"
-       <RadioButton android:id="@+id/radio_pirates"
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:text="@string/pirates"
-                  android:onClick="onRadioButtonClicked"/>
+```
 
-         <RadioButton android:id="@+id/radio_pirates"
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:text="@string/pirates"
-                  android:onClick="onRadioButtonClicked"/>
+```
+<RadioButton android:id="@+id/radio_pirates"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="@string/pirates"
+	android:onClick="onRadioButtonClicked"/>
 
+<RadioButton android:id="@+id/radio_pirates"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="@string/pirates"
+	android:onClick="onRadioButtonClicked"/>
  </RadioGroup>
- ´´´
-**ToggleButton:** Este elemento exibe dois estados, marcado ou desmarcado, com o botão com um indicador colorido e acompanhado com o texto on ou off
+```
+**ToggleButton:**
 
-Sintaxe:
-´´´
+Este elemento exibe dois estados, marcado ou desmarcado, com o botão com um indicador colorido e acompanhado com o texto on ou off  
+
+*Sintaxe:*
+```
 <TextView
         android:id="@+id/toggle_button_label"
         android:layout_width="wrap_content"
@@ -367,11 +455,18 @@ Sintaxe:
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintBaseline_toBaselineOf="@id/toggle"
         android:text="@string/toggle_button" />
-´´´
-**Switch:**  Este elemento é um botão de alternância de dois estados (tendo sua versão mais antiga o SwitchCompat). O usuário pode arrastar o botão "polegar" para frente e para trás para selecionar uma das duas opções ou simplesmente tocar no botão para alternar entre as opções. 
+```
 
-*Sintaxe:* 
-´´´
+**Switch:**
+
+Este elemento é um botão de alternância de dois estados (tendo sua versão mais antiga o *SwitchCompat*). O usuário pode arrastar o botão "polegar" para frente e para trás para selecionar uma das duas opções ou simplesmente tocar no botão para alternar entre as opções. 
+
+<div align="center">
+	<img src="https://user-images.githubusercontent.com/128001916/230237251-ffc6ed11-7e92-4f57-83c4-bcf53ab7d8d0.png" width="300px" height="200px"/>
+</div>
+
+*Sintaxe:*
+```
 fun SwitchComposable(modifier: Modifier = Modifier) {
     Switch(
         checked = false,
@@ -385,14 +480,19 @@ fun SwitchComposable(modifier: Modifier = Modifier) {
         }
     )
 } 
-´´´
+```
 
 
+**FloatingActionButton:**
 
-###FloatingActionButton: Este elemento é um botão de ação flutuante, é utilizado para um tipo especial de ação promovida. Eles são distinguidos por um ícone circular flutuando acima da interface do usuário e possuem comportamentos de movimento especiais relacionados a metamorfose, lançamento e ponto de ancoragem de transferência.
+Este elemento é um botão de ação flutuante, é utilizado para um tipo especial de ação promovida. Eles são distinguidos por um ícone circular flutuando acima da interface do usuário e possuem comportamentos de movimento especiais relacionados a metamorfose, lançamento e ponto de ancoragem de transferência.
+
+<div align="center">
+	<img src="https://user-images.githubusercontent.com/128001916/230237092-5d1d8cd1-8171-422f-b9a4-04863ca42e0c.png" width="300px" height="300px"/>
+</div>
 
 *Sintaxe:*
-´´´
+```
 <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
@@ -401,14 +501,17 @@ fun SwitchComposable(modifier: Modifier = Modifier) {
         android:src="@drawable/ic_my_icon"
         android:contentDescription="@string/submit"
         android:layout_margin="16dp" />
-´´´
+```
+
 
 ### Text
 
-**MultiAutoCompleteTextView:** Este elemento é uma exibição de texto editável, que pode mostrar sugestões de conclusão para a substring do texto em que o usuário está digitando, em vez de necessariamente para a coisa toda.
+**MultiAutoCompleteTextView:** 
+
+Este elemento é uma exibição de texto editável, que pode mostrar sugestões de conclusão para a substring do texto em que o usuário está digitando, em vez de necessariamente para a coisa toda.
 
 *Sintaxe:*
-´´´
+```
 public class CountriesActivity extends Activity {
      protected void onCreate(Bundle savedInstanceState) {
          super.onCreate(savedInstanceState);
@@ -425,12 +528,14 @@ public class CountriesActivity extends Activity {
          "Belgium", "France", "Italy", "Germany", "Spain"
      };
  }
-´´´
+```
 
-**CheckedTextView:** Este elemento é uma extensão para TextView (elemento que mostra o texto para o usuário) que suporta o Checkable (Define uma extensão para visualizações que as tornam verificáveis)  interface e aos monitores.
+**CheckedTextView:** 
+
+Este elemento é uma extensão para TextView (elemento que mostra o texto para o usuário) que suporta o Checkable (Define uma extensão para visualizações que as tornam verificáveis)  interface e aos monitores.
 
 *Sintaxe:*
-´´´
+```
 <CheckedTextView
 android:id="@+id/simpleCheckedTextView"
 android:layout_width="fill_parent"
@@ -439,37 +544,41 @@ android:checked="true"
 android:gravity="center"
 android:checkMark="@drawable/checked"
 android:text="Checked Text View" />
-´´´
+```
 
-**TextInputLayout:** Este elemento mostra um rótulo flutuante quando a dica está oculta enquanto o usuário insere o texto.
+**TextInputLayout:** 
+
+Este elemento mostra um rótulo flutuante quando a dica está oculta enquanto o usuário insere o texto.
 
 *Sintaxe:*
-´´´
+```
 <com.google.android.material.textfield.TextInputLayout
          android:layout_width="match_parent"
          android:layout_height="wrap_content"
          android:hint="@string/form_username">
-´´´
+```
 
 
 ### Widgets
 
-**SeekBar:** Este elemento é uma extensão da ProgressBar que adiciona um polegar (“linha”) arrastável para que o usuário possa levá-la para direita ou esquerda para definir o progresso atual. 
+**SeekBar:** 
+
+Este elemento é uma extensão da ProgressBar que adiciona um polegar (“linha”) arrastável para que o usuário possa levá-la para direita ou esquerda para definir o progresso atual. 
 
 *Sintaxe:*
-´´´
+```
  <SeekBar
         android:id="@+id/seekbar"
         android:layout_marginTop="400dp"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:max="150"/>
-´´´
+```
  
 **SeekBar (Discrete):** O SeekBar Discrete realiza a mesma função do SeekBar porém para números discretos.
 
 *Sintaxe:* 
-´´´
+```
 <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
         android:id="@+id/seekBar"
         android:layout_width="match_parent"
@@ -481,12 +590,14 @@ android:text="Checked Text View" />
         app:dsb_progressColor="@color/purple_200"
         app:dsb_rippleColor="@color/purple_200"
         app:dsb_trackColor="@color/purple_200" />
-´´´
+```
 
-**RatingBar:** Este elemento é uma extensão do ProgressBar e SeekBar que mostra a classificação em estrelas. 
+**RatingBar:** 
+
+Este elemento é uma extensão do ProgressBar e SeekBar que mostra a classificação em estrelas. 
  
 *Sintaxe:* 
-´´´
+```
  <RatingBar
             android:id="@+id/rtb"
             android:layout_width="wrap_content"
@@ -495,11 +606,14 @@ android:text="Checked Text View" />
             android:progressTint="#FFC107"
             android:secondaryProgressTint="#FFEB3B"
             android:stepSize="0.1"/>
-´´´
-**SearchView:** Este elemento é utilizado para mostrar para o usuário uma um local para inserir uma pesquisa e enviar uma solicitação a um provedor de pesquisa, mostrando uma lista de sugestões ou resultados de consulta disponíveis para o usuário escolher uma opção. 
+```
+
+**SearchView:** 
+
+Este elemento é utilizado para mostrar para o usuário uma um local para inserir uma pesquisa e enviar uma solicitação a um provedor de pesquisa, mostrando uma lista de sugestões ou resultados de consulta disponíveis para o usuário escolher uma opção. 
 
 *Sintaxe:*
-´´´
+```
 <?xml version="1.0" encoding="utf-8"?>
     <menu xmlns:android="http://schemas.android.com/apk/res/android">
         <item android:id="@+id/search"
@@ -508,11 +622,13 @@ android:text="Checked Text View" />
               android:showAsAction="collapseActionView|ifRoom"
               android:actionViewClass="android.widget.SearchView" />
     </menu>
- ´´´
-**TextureView:** Este elemento é utilizado para exibir um fluxo de conteúdo, como o proveniente de uma visualização de câmera, um vídeo ou uma cena OpenGL. O fluxo de conteúdo pode vir do processo do aplicativo, bem como de um processo remoto.
+ ```
+**TextureView:** 
+
+Este elemento é utilizado para exibir um fluxo de conteúdo, como o proveniente de uma visualização de câmera, um vídeo ou uma cena OpenGL. O fluxo de conteúdo pode vir do processo do aplicativo, bem como de um processo remoto.
 
 *Sintaxe:*
-´´´
+```
 public class MyActivity extends Activity implements TextureView.SurfaceTextureListener {
       private MediaPlayer mMediaPlayer;
       private TextureView mTextureView;
@@ -526,21 +642,25 @@ public class MyActivity extends Activity implements TextureView.SurfaceTextureLi
           mTextureView.setSurfaceTextureListener(this);
           setContentView(mTextureView);
       }
-´´´
-**SurfaceView:** Este elemento fornece uma superfície de desenho dedicada incorporada dentro de uma hierarquia de exibição. Você pode controlar o formato desta superfície e, se quiser, seu tamanho; o SurfaceView cuida de colocar a superfície no local correto na tela.
+```
+**SurfaceView:**
+
+Este elemento fornece uma superfície de desenho dedicada incorporada dentro de uma hierarquia de exibição. Você pode controlar o formato desta superfície e, se quiser, seu tamanho; o SurfaceView cuida de colocar a superfície no local correto na tela.
 
 *Sintaxe:*
-´´´
+```
 SurfaceView(
     context: Context!,
     attrs: AttributeSet!,
     defStyleAttr: Int,
     defStyleRes: Int)
-´´´
-**Horizontal Divider:** Este elemento que cria uma linha horizontal dividindo os elementos 
+```
+**Horizontal Divider:** 
+
+Este elemento que cria uma linha horizontal dividindo os elementos 
 
 *Sintaxe:*
-´´´
+```
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
    android:layout_width="match_parent"
    android:layout_height="match_parent"
@@ -549,12 +669,14 @@ SurfaceView(
    android:orientation="horizontal"
    android:gravity="center">
  </LinearLayout>
-´´´
+```
 
-**Vertical Dividir:** Este elemento que cria uma linha vertical dividinho os elementos
+**Vertical Divider:** 
+
+Este elemento que cria uma linha vertical dividinho os elementos
 
 *Sintaxe:*
-´´´
+```
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
    android:layout_width="match_parent"
    android:layout_height="match_parent"
@@ -563,7 +685,8 @@ SurfaceView(
    android:orientation="vertical"
    android:gravity="center">
  </LinearLayout>
-´´´
+```
+
 <h2 id="t5"> Referências </h2>
 
 https://www.javatpoint.com/pt/loops-em-java
@@ -610,5 +733,9 @@ https://developer.android.com/reference/kotlin/android/view/SurfaceView
 https://developer.android.com/reference/android/view/SurfaceView 
 https://developer.android.com/reference/android/view/View.html 
 https://developer.android.com/reference/android/widget/LinearLayout 
-
+https://developer.android.com/reference/android/widget/ImageButton
+https://developer.android.com/reference/android/widget/Button.html
+https://developer.android.com/reference/com/google/android/material/chip/ChipGroup
+https://developer.android.com/reference/com/google/android/material/chip/Chip.html
+https://developer.android.com/reference/android/widget/CheckBox.html
 
