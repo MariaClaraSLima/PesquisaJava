@@ -506,6 +506,72 @@ Este elemento é um botão de ação flutuante, é utilizado para um tipo especi
 
 ### Text
 
+**TextView:**
+
+Esse é um elemento que permite exibir textos pré-definidos ao usuário, porém pode-se utilizar uma propriedade para que o usuário digite texto `EditText`.
+
+*Sintaxe:*
+
+```
+<LinearLayout
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/text_view_id"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/hello" />
+ </LinearLayout>
+```
+
+**Edit Text:**
+
+Essa é uma categoria de elementos que permite ao usuário inserir ou modificar um texto. Se enquadram nessa categoria: **Plain Text**, **Password**, **Password Numéric**, **E-mail**, **Phone**, **Postal Address**, **Multiline Text**, **Time**, **Date**, **Number**, **Number (Signed)**, **Number (Decimal)**.
+
+<div align="center">
+	<img src="https://user-images.githubusercontent.com/128001916/230372387-f9cb0ad7-281a-486d-8e62-f2d578ee5aee.png"/>
+</div>
+	
+*Sintaxe:*
+
+```
+<EditText
+     android:id="@+id/plain_text_input"
+     android:layout_height="wrap_content"
+     android:layout_width="match_parent"
+     android:inputType="text"/>
+```
+
+**AutoCompleteTextView**
+
+Como o nome sugere o AutoCompleteTextView, é uma caixa de texto com a função de “autocomplete”, ou seja, quando o usuário estiver digitando aparecerá uma caixa de sugestões.
+
+<div align=”center”>
+<img src=”https://www.tutorialspoint.com/android/images/auto.jpg” width=”300px” height=”500px”/>
+</div>
+
+*SIntaxe:*
+
+```
+public class CountriesActivity extends Activity {
+     protected void onCreate(Bundle icicle) {
+         super.onCreate(icicle);
+         setContentView(R.layout.countries);
+
+         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                 android.R.layout.simple_dropdown_item_1line, COUNTRIES);
+         AutoCompleteTextView textView = (AutoCompleteTextView)
+                 findViewById(R.id.countries_list);
+         textView.setAdapter(adapter);
+     }
+
+     private static final String[] COUNTRIES = new String[] {
+         "Belgium", "France", "Italy", "Germany", "Spain"
+     };
+ }
+```
+
 **MultiAutoCompleteTextView:** 
 
 Este elemento é uma exibição de texto editável, que pode mostrar sugestões de conclusão para a substring do texto em que o usuário está digitando, em vez de necessariamente para a coisa toda.
@@ -560,6 +626,108 @@ Este elemento mostra um rótulo flutuante quando a dica está oculta enquanto o 
 
 
 ### Widgets
+
+**View:**
+
+A *View* é uma classe onde se coloca os componentes de interface. Basicamente ela é uma área retangular que controla os tratamentos de eventos e desenho. 
+
+*Sintaxe:*
+
+```
+<View ...
+           android:tag="@string/mytag_value" />
+     <View ...>
+         <tag android:id="@+id/mytag"
+              android:value="@string/mytag_value" />
+     </View>
+```
+
+**ImageView:**
+
+Essa classe é uma extensão da classe *View*, pois ele exibe recursos de imagens. geralmente ela é utilizada para redimensionar a imagem ou mudar tonalidades.
+
+*Sintaxe:*
+
+```
+<LinearLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent">
+     <ImageView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:src="@drawable/my_image"
+         android:contentDescription="@string/my_image_description"
+         />
+ </LinearLayout>
+```
+
+**WebView:**
+
+*WebView* é utilizado para exibir elementos de páginas web. Pode- se dizer que um navegador bem limitado, por isso é recomendado utilizar o navegador padrão.
+
+*Sintaxe:*
+
+```
+public WebView (Context context, 
+                AttributeSet attrs, 
+                int defStyleAttr, 
+                int defStyleRes)
+```
+
+**VideoView:**
+
+Essa classe permite exibir um arquivo de vídeo. Ela permite também, calcular a medição a partir do vídeo, podendo ser utilizada em qualquer gerenciador de layout. Além disso, é possível mudar a tonalidade e o dimensionamento do vídeo.
+
+*Sintaxe:*
+
+```
+public VideoView (Context context, 
+                AttributeSet attrs, 
+                int defStyleAttr, 
+                int defStyleRes)
+```
+
+**CalendarView:**
+
+A classe *CalendarView* permite exibir e selecionar datas. O intervalo dessas datas pode ser configurado de acordo com a necessidade do cliente.
+
+<img src=”https://user-images.githubusercontent.com/2614225/46456381-f72da200-c7ae-11e8-8284-1799fe83a1c9.png” width=”200px” height=”500px”/>
+
+*Sintaxe:*
+
+```
+public CalendarView (Context context, 
+                AttributeSet attrs, 
+                int defStyleAttr, 
+                int defStyleRes)
+```
+
+**ProgressBar:**
+
+Esse elemento é utilizado para quando se necessita indicar o progresso de alguma operação. Com isso, irá exibir a barra de progresso até que a operação finalize.
+
+*Sintaxe:* 
+
+```
+<ProgressBar
+      android:id="@+id/indeterminateBar"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      />
+```
+
+**ProgressBar (Horizontal):**
+
+Este elemento possui o mesmo conceito que o *ProgressBar*, porém possui a diferença da posição, que neste caso é horizontal.
+
+<img src=”https://i.stack.imgur.com/GFO7z.png” width=”400px” height=”600px”/>
+
+*Sintaxe:*
+
+```
+public static final int Widget_ProgressBar_Horizontal
+```
 
 **SeekBar:** 
 
@@ -738,4 +906,19 @@ https://developer.android.com/reference/android/widget/Button.html
 https://developer.android.com/reference/com/google/android/material/chip/ChipGroup
 https://developer.android.com/reference/com/google/android/material/chip/Chip.html
 https://developer.android.com/reference/android/widget/CheckBox.html
+https://developer.android.com/reference/android/widget/TextView
+https://developer.android.com/reference/android/widget/EditText.html
+https://developer.android.com/reference/android/widget/AutoCompleteTextView
+https://developer.android.com/reference/android/view/View.html
+https://developer.android.com/reference/android/widget/ImageView
+https://developer.android.com/reference/android/webkit/WebView
+https://developer.android.com/reference/android/content/Context
+https://developer.android.com/reference/android/webkit/WebView
+https://developer.android.com/reference/android/widget/VideoView.html
+https://developer.android.com/reference/android/widget/CalendarView
+https://developer.android.com/reference/android/widget/ProgressBar
+https://developer.android.com/reference/android/widget/ProgressBar
+https://developer.android.com/reference/android/widget/ProgressBar
+https://developer.android.com/reference/android/R.style#Widget_ProgressBar_Horizontal
+
 
